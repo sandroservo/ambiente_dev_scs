@@ -6,11 +6,11 @@ services:
       - "3000:3000"
       - "5555:5555"  # Maps container port 3000 to host port 3000
     volumes:
-      - ./:/app   # Mounts the current directory as /app in the container
+      - .:/home/node/app   # Mounts the current directory as /app in the container
     environment:
       - POSTGRES_HOST=db  # Database connection details (adjust as needed)
-      - POSTGRES_USER=ostgres
-      - POSTGRES_PASSWORD=ostgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=scs
   db:
       image: postgres 
@@ -18,7 +18,7 @@ services:
       environment: 
         POSTGRES_PASSWORD: postgres
       volumes:  
-        - ./data-pqsql-db:/var/lib/postgresql/data
+        - ./.docker/data-pqsql-db:/var/lib/postgresql/data
       ports:
         - "5432:5432"
       container_name: pqsql

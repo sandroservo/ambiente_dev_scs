@@ -1,6 +1,6 @@
-FROM node:buster:latest
+FROM node:buster
 
-#RUN apt update -y && apt install -y procps
+RUN apt-get update -y && apt-get install -y openssl
 
 
 USER node

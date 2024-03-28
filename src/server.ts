@@ -12,6 +12,6 @@ app.use(cors());
 routes(app)
 
 
-app.listen(3333 , () => {
+app.listen(3000 , () => {
     console.log('Server is running 🚀')
 });

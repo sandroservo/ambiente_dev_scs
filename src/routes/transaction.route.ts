@@ -1,5 +1,5 @@
 import { Application } from "express";
-import { TransactionController } from "../../controllers/transaction.controller";
+import { TransactionController } from "../controllers/transaction.controller";
 
 
 export const transactionRoutes =(app: Application) => {

@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 
-import { TransactionValidation } from "../src/validation/transaction.validation"
-import { TransactionRepository } from "../src/repositories/transaction.repository";
+import { TransactionValidation } from "../validation/transaction.validation"
+import { TransactionRepository } from "../repositories/transaction.repository";
 
 
 export class TransactionController {
